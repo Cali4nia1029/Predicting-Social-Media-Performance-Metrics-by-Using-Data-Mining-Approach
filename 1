@@ -1,0 +1,110 @@
+read.csv("/Users/kevinpanna/Desktop/dataset_Facebook.csv”, header=TRUE, sep=“;”)
+
+data_1 <- data[,1:8]
+error_linear <- c()
+for(i in 1:100)
+{label <- sample(c(1:500),size=400,replace=F)
+model_random <- randomForest(comment like share Total.Interactions~.,data=data_2,subset=label)
+pred_random <- predict(model_random,data_2[-label,1:7])
+error_random[i] <- mean((pred_random-data_2[-label,8])^2)
+
+model_random <- randomForest(Lifetime.Post.Total.Impressions ~.,data=data_2,subset=label)
+pred_random <- predict(model_random,data_2[-label,1:7])
+error_random[i] <- mean((pred_random-data_2[-label,8])^2)
+}
+
+{label <- sample(c(1:500),size=400,replace=F)
+model_random <- randomForest(comment.like.share.Total.Interactions.,data=data_2,subset=label)
+pred_random <- predict(model_random,data_2[-label,1:7])
+error_random[i] <- mean((pred_random-data_2[-label,8])^2)
+}
+
+ data=read.csv("/Users/kevinpanna/Desktop/dataset_Facebook.csv",header=TRUE, sep=“;”)
+> data
+    
+> data_2 <- cbind(data[,1:7],data[,9])
+> data
+data_18 <- data[,c(1:7,18)]
+data_17 <- data[,c(1:7,17)]
+
+error_random <- c()
+error_tree <- c()
+error_linear <- c()
+for(i in 1:100)
+{label <- sample(c(1:500),size=400,replace=F) 
+model_random <- randomForest(Total.Interactions~.,data=data_19,subset=label)
+pred_random <- predict(model_random,data_19[-label,1:7])
+error_random[i] <- mean((pred_random-data_19[-label,8])^2)
+}
+
+model_tree <- randomForest(Total.Interactions~.,data=data_19,subset=label)
+pred_tree <- predict(model_random,data_19[-label,1:7])
+error_tree[i] <- mean((pred_random-data_19[-label,8])^2)
+}
+
+model_linear <- randomForest(Total.Interactions~.,data=data_19,subset=label)
+pred_linear <- predict(model_random,data_19[-label,1:7])
+error_linear[i] <- mean((pred_random-data_19[-label,8])^2)
+}
+
+error_random <- c()
+error_tree <- c()
+error_linear <- c()
+for(i in 1:100)
+{label <- sample(c(1:500),size=400,replace=F)
+model_random <- randomForest(share~.,data=data_18,subset=label)
+pred_random <- predict(model_random,data_18[-label,1:7])
+error_random[i] <- mean((pred_random-data_19[-label,8])^2)
+}
+
+model_tree <- randomForest(share~.,data=data_18,subset=label)
+pred_tree <- predict(model_random,data_18[-label,1:7])
+error_tree[i] <- mean((pred_random-data_18[-label,8])^2)
+}
+
+model_linear <- randomForest(share~.,data=data_18,subset=label)
+pred_linear <- predict(model_random,data_18[-label,1:7])
+error_linear[i] <- mean((pred_random-data_18[-label,8])^2)
+}
+
+error_random <- c()
+error_tree <- c()
+error_linear <- c()
+for(i in 1:100)
+{label <- sample(c(1:500),size=400,replace=F)
+model_random <- randomForest(like~.,data=data_17,subset=label)
+pred_random <- predict(model_random,data_17[-label,1:7])
+error_random[i] <- mean((pred_random-data_19[-label,8])^2)
+}
+
+model_tree <- randomForest(like~.,data=data_17,subset=label)
+pred_tree <- predict(model_random,data_17[-label,1:7])
+error_tree[i] <- mean((pred_random-data_17[-label,8])^2)
+}
+
+model_linear <- randomForest(like~.,data=data_17,subset=label)
+pred_linear <- predict(model_random,data_17[-label,1:7])
+error_linear[i] <- mean((pred_random-data_17[-label,8])^2)
+}
+
+ > names(data)
+ [1] "Page.total.likes"                                                   
+ [2] "Type"                                                               
+ [3] "Category"                                                           
+ [4] "Post.Month"                                                         
+ [5] "Post.Weekday"                                                       
+ [6] "Post.Hour"                                                          
+ [7] "Paid"                                                               
+ [8] "Lifetime.Post.Total.Reach"                                          
+ [9] "Lifetime.Post.Total.Impressions"                                    
+[10] "Lifetime.Engaged.Users"                                             
+[11] "Lifetime.Post.Consumers"                                            
+[12] "Lifetime.Post.Consumptions"                                         
+[13] "Lifetime.Post.Impressions.by.people.who.have.liked.your.Page"       
+[14] "Lifetime.Post.reach.by.people.who.like.your.Page"                   
+[15] "Lifetime.People.who.have.liked.your.Page.and.engaged.with.your.post"
+[16] "comment"                                                            
+[17] "like"                                                               
+[18] "share"                                                              
+[19] "Total.Interactions"                                                 
+> data_18=<-data[,c(1:7,18)]
